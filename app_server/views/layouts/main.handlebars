@@ -4,7 +4,7 @@
 <head>
 	<title>{{title}}</title>
 
-	
+
 
 	<link rel="stylesheet" type="text/css" href="/stylesheets/mystyle.css">
 	<script src="downloads/jquery-3.0.0.min.js"></script>
@@ -12,12 +12,16 @@
 
 <body>
 
-	<div class="head">
-
-
-  </div>
 
 	{{{body}}}
+  <div id="ajaxContent">
+  <form method="GET">
+    <input type="text" placeholder="Name of album">
+    <input id="albumButton" type="submit">
+  </form>
+  </div>
+  <div id="topCharts">
+  </div>
 
 		<footer class="navbar-default navbar-bottom">
 			<div class="container">
