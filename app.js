@@ -1,7 +1,12 @@
-require('./app_server/models/db');
+require('./app_api/models/db');
+
 var express = require('express');
 var app = express();
 var path = require('path');
+var bp = require('body-parser');
+
+app.use(bp.json());
+app.use(bp.urlencoded({extended:true}));
 
 app.use(express.static(__dirname + '/public'));
 app.set('views', path.join(__dirname, 'app_server', 'views'));
@@ -10,7 +15,8 @@ var handlebars = require('express-handlebars').create({defaultLayout:'../../app_
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
-// app.use('/', require('./app_server/routes/index'));
+app.use('/', require('./app_server/routes/index'));
+app.use('/album', require('./app_api/routes/albumRoutes'));
 
 app.use(function(req, res){
     res.status(404);

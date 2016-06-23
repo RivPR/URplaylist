@@ -24,8 +24,12 @@
   },
   "homepage": "https://github.com/RivPR/URplaylist#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie": "^0.3.1",
+    "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
+    "mongodb": "^2.1.18",
     "mongoose": "^4.5.1"
   }
 }
