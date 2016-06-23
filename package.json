@@ -1,0 +1,26 @@
+{
+  "name": "urplaylist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RivPR/URplaylist.git"
+  },
+  "keywords": [
+    "jQuery",
+    "Javascript",
+    "Express.js",
+    "Mongoose",
+    "MongoDB"
+  ],
+  "author": "AM Moreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RivPR/URplaylist/issues"
+  },
+  "homepage": "https://github.com/RivPR/URplaylist#readme"
+}
