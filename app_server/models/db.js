@@ -33,3 +33,7 @@ process.on('SIGTERM', function() {
     process.exit(0);
   });
 });
+
+require('./artist');
+require('./track');
+require('./album');
