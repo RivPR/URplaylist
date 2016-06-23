@@ -1,0 +1,6 @@
+.DS_Store
+target
+build
+metadata
+node_modules
+
