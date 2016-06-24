@@ -42,17 +42,21 @@ var albumSearchSuccessCallback = function(data){
   var $div = $('<div id="albumSearchResultDiv">');
     $.each(data.results.albummatches.album, function(index, value){
 
-      var $name = $('<li> '+ value.name + ' <a href=" ' + value.url + '" target="_blank"> '  +
-                    value.artist + ' </a><img src="' + value.image[1]["#text"]+ '"> </li><br/>' );
+      var $name = $('<li> '+ value.artist + ' <a href=" ' + value.url + '" target="_blank"> '  +
+                    value.name + ' </a><img src="' + value.image[1]["#text"]+ '"> </li><br/>' );
       console.log(index + ' ' + $name.toString())
       $li.append($name);
 
 
     });
     $('body').append($div);
+
+    var button = $('<button id="buttonClose">Close</button>');
+    $('#albumSearchResultDiv').append(button);
+
     $('#albumSearchResultDiv').append($li);
 
-
+    $('#buttonClose').click(closeDiv);
 }
 
 var topFiveSuccessCallback = function(data){
@@ -78,7 +82,18 @@ var topFiveSuccessCallback = function(data){
     $table.append($playCount);
 
     $table.append('</tr>');
-    });
 
+
+
+    });
+ var button = $('<button id="buttonClose">Close</button>');
+
+ $('#topCharts').append(button);
  $('#topCharts').append($table);
+ $('#buttonClose').click(closeDiv);
+}
+
+var closeDiv = function(){
+  console.log('clicked the close button');
+  $(this).parent().remove();
 }
