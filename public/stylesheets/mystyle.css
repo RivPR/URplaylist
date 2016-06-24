@@ -1,6 +1,18 @@
 body{
 background-color: lightgrey;
 }
-#ajaxContent{
+#albumSearchDiv{
   background-color: lightgreen;
 }
+#albumSearchResultDiv{
+  background-color: lightblue;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*a: visited{
+  text-decoration: none;
+
+}*/
