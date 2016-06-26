@@ -1,3 +1,7 @@
+
+//TODO create an actual API, make it so the URL that jQuery is using calls
+//the REST endpoints created in your server api
+
 $(document).ready(function(){
 console.log('Loaded');
 
@@ -21,7 +25,6 @@ $('#topFive').click(function(e){
 $('#albumButton').click(function(e){
   e.preventDefault();
   var album = $('form').serializeArray();
-  console.log('clicked album search: ' + album[0].value);
   var url = 'http://ws.audioscrobbler.com/2.0/?method=album.search&limit=15&album=' + (album[0].value) + '&api_key=41d6d1221c2d58f4e99059abab7a48db&format=json';
 
   $.ajax({
